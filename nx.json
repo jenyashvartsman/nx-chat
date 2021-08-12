@@ -12,7 +12,9 @@
     }
   },
   "projects": {
-    "client": { "tags": [] },
-    "server": { "tags": [] }
+    "client": { "tags": ["scope:client-app"] },
+    "server": { "tags": ["scope:server-app"] },
+    "client-sign-in-view": { "tags": ["scope:client-app", "type:feature"] },
+    "client-chat-view": { "tags": ["scope:client-app", "type:feature"] }
   }
 }

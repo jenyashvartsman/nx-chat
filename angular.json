@@ -166,6 +166,56 @@
           }
         }
       }
+    },
+    "client-sign-in-view": {
+      "projectType": "library",
+      "root": "libs/client/sign-in-view",
+      "sourceRoot": "libs/client/sign-in-view/src",
+      "prefix": "nx-chat",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/sign-in-view/src/**/*.ts",
+              "libs/client/sign-in-view/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/sign-in-view"],
+          "options": {
+            "jestConfig": "libs/client/sign-in-view/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "client-chat-view": {
+      "projectType": "library",
+      "root": "libs/client/chat-view",
+      "sourceRoot": "libs/client/chat-view/src",
+      "prefix": "nx-chat",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/chat-view/src/**/*.ts",
+              "libs/client/chat-view/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/chat-view"],
+          "options": {
+            "jestConfig": "libs/client/chat-view/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

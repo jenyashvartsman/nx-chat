@@ -1,20 +1,43 @@
 {
   "implicitDependencies": {
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     ".eslintrc.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "nx-chat",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   },
   "projects": {
-    "client": { "tags": ["scope:client-app"] },
-    "server": { "tags": ["scope:server-app"] },
-    "client-sign-in-view": { "tags": ["scope:client-app", "type:feature"] },
-    "client-chat-view": { "tags": ["scope:client-app", "type:feature"] }
+    "client": {
+      "tags": ["scope:client-app"]
+    },
+    "client-chat-view": {
+      "tags": ["scope:client-app", "type:feature"]
+    },
+    "client-sign-in-view": {
+      "tags": ["scope:client-app", "type:feature"]
+    },
+    "server": {
+      "tags": ["scope:server-app"]
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }
